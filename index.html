@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>证安的网站</title>
+
+    <meta
+      name="description"
+      content="证安的个人网站：收集编程、AI 与学习资源，包含工具与教程链接。"
+    />
+    <meta name="keywords" content="证安, 编程, AI, 教程, 资源, 静态网站" />
+    <meta name="author" content="证安" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://zheng-08.github.io/" />
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="证安的网站" />
+    <meta
+      property="og:description"
+      content="证安的个人网站：收集编程、AI 与学习资源，包含工具与教程链接。"
+    />
+    <meta property="og:url" content="https://zheng-08.github.io/" />
+    <meta property="og:image" content="https://zheng-08.github.io/logo.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="证安的网站" />
+    <meta
+      name="twitter:description"
+      content="证安的个人网站：收集编程、AI 与学习资源。"
+    />
+    <meta name="twitter:image" content="https://zheng-08.github.io/logo.png" />
+    <!-- 可选增强的 Meta 标签（可直接插入到 head 中 canonical 之后） -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- PWA / 移动 Web App -->
+    <meta name="application-name" content="证安的网站" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="证安的网站" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <!-- Microsoft 磁贴（可选图片路径需准备） -->
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+
+    <!-- Open Graph / Twitter 补充 -->
+    <meta property="og:site_name" content="证安的网站" />
+    <meta property="og:image:alt" content="证安的网站标识" />
+    <meta name="twitter:site" content="@你的账号" />
+    <meta name="twitter:creator" content="@你的账号" />
+
+    <!-- 站长验证（示例占位，若使用 Search Console 请替换） -->
+    <!-- <meta name="google-site-verification" content="你的验证代码" /> -->
+
+    <!-- 注意：Content-Security-Policy 建议通过服务器响应头设置，如需通过 meta 插入请谨慎配置 -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src 'self' data: https:;"> -->
+
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/x-icon" href="logo.png" />
+    <link rel="manifest" href="manifest.json" />
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("sw.js").then(
+            function (registration) {
+              console.log("ServiceWorker 注册成功");
+            },
+            function (err) {
+              console.log("ServiceWorker 注册失败: ", err);
+            }
+          );
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <!-- 头部栏 -->
+    <div class="touBuLan">
+      <img src="logo.png" alt="logo" class="logo" />
+      <div class="BiaoTi">
+        <h1>点击图片跳转到该网站</h1>
+      </div>
+      <div class="tiShi">
+        <div class="tiShiKuang" onclick="dianJi1()">
+          <p class="tiShiKuangWenZi">点击前往编程网站</p>
+        </div>
+        <div class="tiShiKuang" onclick="dianJi2()">
+          <p class="tiShiKuangWenZi">点击前往AI网站</p>
+        </div>
+        <div class="tiShiKuang" onclick="dianJi3()">
+          <p class="tiShiKuangWenZi">点击前往学习网站</p>
+        </div>
+      </div>
+      <a class="geRenJianJie" href="https://zheng-08.github.io">
+        <p class="geRenJianJieWenZi">个人简介</p>
+      </a>
+    </div>
+    <!-- 主区域 -->
+    <div class="zhuQuYu">
+      <!-- 侧边栏 -->
+      <div class="ceBianLan">
+        <!-- 选项栏 -->
+        <div class="xuanXiangLan">
+          <p class="xuanXiangLanWenZi" onclick="dianJi1()">点击前往编程网站</p>
+        </div>
+        <div class="xuanXiangLan">
+          <p class="xuanXiangLanWenZi" onclick="dianJi2()">点击前往AI网站</p>
+        </div>
+        <div class="xuanXiangLan">
+          <p class="xuanXiangLanWenZi" onclick="dianJi3()">点击前往学习网站</p>
+        </div>
+      </div>
+      <!-- 内容区1 -->
+      <div id="page1" class="neiRongQu">
+        <!-- 数据区 -->
+        <div class="shuJuQu">
+          <!-- 左侧 -->
+          <div class="zuoCe">
+            <!-- 数据块 -->
+            <div class="shuJuKuai">
+              <a href="https://space.bilibili.com/34786453/lists">
+                <img src="kwc.jpg" alt="kwc" class="sjk-img" />
+              </a>
+              <a class="imgWenZi">编程教学视频</a>
+            </div>
+            <div class="shuJuKuai mt20">
+              <a href="https://www.midorg.com/h.html">
+                <img src="midlogo.png" alt="midlogo" class="sjk-img" />
+              </a>
+              <a class="imgWenZi">元岛在线编辑html</a>
+            </div>
+            <div class="shuJuKuai mt20">
+              <a href="https://vscode.dev/?vscode-lang=zh-cn">
+                <img src="vsc.jpg" alt="vsc" class="sjk-img" />
+              </a>
+              <a class="imgWenZi">VSCode在线编辑html</a>
+            </div>
+          </div>
+          <!-- 右侧 -->
+          <div class="youCe">
+            <!-- 数据块 -->
+            <div class="shuJuKuai">
+              <a href="https://www.midorg.com/vsc.html">
+                <img src="midlogo.png" alt="midlogo" class="sjk-img" />
+              </a>
+              <a class="imgWenZi">编程工具下载</a>
+            </div>
+            <div class="shuJuKuai mt20">
+              <a
+                href="https://blog.csdn.net/qq_20042935/article/details/133920722"
+              >
+                <img src="cson.jpg" alt="cson" class="sjk-img" />
+              </a>
+              <a class="imgWenZi">部署静态网站</a>
+            </div>
+            <div class="shuJuKuai mt20">
+              <a href="https://imgbb.com/">
+                <img src="ibb.jpg" alt="ibb" class="sjk-img" />
+              </a>
+              <a class="imgWenZi">图片链接生成</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 内容区2 -->
+      <div id="page2" class="neiRongQu hidden">
+        <!-- 数据区 -->
+        <div class="shuJuQu">
+          <!-- 左侧 -->
+          <div class="zuoCe">
+            <!-- 数据块 -->
+            <div class="shuJuKuai">
+              <a href="https://chatgpt.com/">
+                <img src="chatgpt.png" alt="chatgpt" class="sjk-img" />
+              </a>
+              <a class="imgWenZi">ChatGPT</a>
+            </div>
+            <div class="shuJuKuai mt20">
+              <a href="https://www.deepseek.com/">
+                <img src="deepseek.png" alt="deepseek" class="sjk-img" />
+              </a>
+              <a class="imgWenZi">DeepSeek</a>
+            </div>
+            <div class="shuJuKuai mt20">
+              <a href="https://gemini.google.com/app">
+                <img src="gemini.png" alt="gemini" class="sjk-img" />
+              </a>
+              <a class="imgWenZi">Gemini</a>
+            </div>
+            <div class="shuJuKuai mt20">
+              <a
+                href="https://www.google.com/aclk?sa=L&pf=1&ai=DChsSEwiRvNSQjvyRAxVt20wCHYV-JO0YACICCAEQABoCdG0&co=1&ase=2&gclid=Cj0KCQiAyP3KBhD9ARIsAAJLnnYhTHTUEFUnODOJ9PtaVHJYtLQgBfS44j3CumI9QIlFnJNvSvgakZEaAp_EEALw_wcB&cid=CAAS0wHkaFG8n7Z6FGkOK1vsRn481nEDiaOjLD4731uHMaDUjHTmh9hJ0M0vgw3FgdKlel0MB9VjMeNH8KVIjMcDlILnY55Srxp7syoJIYiM185v5cO06k5YIWZKS3p5smR5I61Nahim_zR9uby9BjhUwSqS4gghBpqp9B0dR7a3JVImMiuJ9XeyKTzQA4L1i6OJkeDxA1ilM81DWvtjZRO1XC8G3pIjn9ECk_RtPgI02DCkgG78Q6h-qjvx-1B1-8hRZscVNC9yLb4wqzLoAmmXZwdzKQAe&cce=2&category=acrcp_v1_32&sig=AOD64_3JrYEunnVYNYOc6EjJYqZOnFc8zg&q&nis=4&adurl=https://www.asksia.ai/?via%3Dasit%26gad_source%3D1%26gad_campaignid%3D23357415001%26gbraid%3D0AAAAA_aRnZpNRh27hqoQl0zN2RHqcW2hY%26gclid%3DCj0KCQiAyP3KBhD9ARIsAAJLnnYhTHTUEFUnODOJ9PtaVHJYtLQgBfS44j3CumI9QIlFnJNvSvgakZEaAp_EEALw_wcB&ved=2ahUKEwirnsyQjvyRAxXuXGwGHX3YGeEQ0Qx6BAgMEAE"
+              >
+                <img src="asksia.jpg" alt="asksia" class="sjk-img" />
+              </a>
+              <a class="imgWenZi">AskSia</a>
+            </div>
+          </div>
+          <!-- 右侧 -->
+          <div class="youCe">
+            <!-- 数据块 -->
+            <div class="shuJuKuai">
+              <a href="https://www.perplexity.ai/">
+                <img src="perplexity.png" alt="perplexity" class="sjk-img" />
+              </a>
+              <a class="imgWenZi">Perplexity</a>
+            </div>
+            <div class="shuJuKuai mt20">
+              <a href="https://claude.ai/">
+                <img src="claude.png" alt="claude" class="sjk-img" />
+              </a>
+              <a class="imgWenZi">Claude</a>
+            </div>
+            <div class="shuJuKuai mt20">
+              <a href="https://copilot.microsoft.com/">
+                <img src="copolit.jpg" alt="copilot" class="sjk-img" />
+              </a>
+              <a class="imgWenZi">Copilot</a>
+            </div>
+            <div class="shuJuKuai mt20">
+              <a href="https://admisist.ai/">
+                <img src="admisist.png" alt="admisist" class="sjk-img" />
+              </a>
+              <a class="imgWenZi">Admisist</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 内容区3 -->
+      <div id="page3" class="neiRongQu hidden">
+        <!-- 数据区 -->
+        <div class="shuJuQu">
+          <!-- 左侧 -->
+          <div class="zuoCe">
+            <!-- 数据块 -->
+            <div class="shuJuKuai">
+              <a
+                href="https://dictionary.cambridge.org/dictionary/english-chinese-simplified/"
+              >
+                <img src="cambridge.jpg" alt="cambridge" class="sjk-img" />
+              </a>
+              <a class="imgWenZi">Cambridge Dictionary</a>
+            </div>
+            <div class="shuJuKuai mt20">
+              <a href="https://www.ekamus.info/">
+                <img src="ekamus.jpg" alt="ekamus" class="sjk-img" />
+              </a>
+              <a class="imgWenZi">ekamus</a>
+            </div>
+          </div>
+          <!-- 右侧 -->
+          <div class="youCe">
+            <!-- 数据块 -->
+            <div class="shuJuKuai">
+              <a href="https://zd.hwxnet.com/">
+                <img src="xinhua.jpg" alt="xinhua" class="sjk-img" />
+              </a>
+              <a class="imgWenZi">新华字典</a>
+            </div>
+            <div class="shuJuKuai mt20">
+              <a href="https://www.wolframalpha.com/">
+                <img src="wolfram.png" alt="wolfram" class="sjk-img" />
+              </a>
+              <a class="imgWenZi">数学计算</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
